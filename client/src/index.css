@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 14.3% 19.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 14.3% 19.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 14.3% 19.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 211 90% 35%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 187 56% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 350 84% 44%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 222 14.3% 19.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 220 10% 10.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 211 90% 35%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 187 56% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 350 84% 44%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-[Open_Sans] text-foreground bg-background;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-[Montserrat] font-bold;
+  }
+}
+
+@layer components {
+  .bg-gradient {
+    @apply bg-gradient-to-br from-primary to-secondary;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-1000;
+  }
+
+  .reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .languages-ticker {
+    @apply whitespace-nowrap overflow-hidden inline-block;
+    animation: slide 20s linear infinite;
+  }
+
+  .progress-bar {
+    @apply relative w-full h-2 rounded-full bg-gray-200 overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply absolute h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply transform -translate-y-2 shadow-lg;
+  }
+
+  .project-card img {
+    @apply transition-transform duration-500;
+  }
+
+  .project-card:hover img {
+    @apply scale-105;
+  }
+}
+
+/* Fonts are imported in index.html */
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(var(--accent));
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid hsl(var(--accent));
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
