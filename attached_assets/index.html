@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Added to solve horizontal scrolling issue */ -->
+    <meta name="description" content="A portfolio website showcasing my skills, projects, and achievements.">
+    <meta name="keywords" content="portfolio, web development, AI, robotics, software engineering">
+    <meta name="author" content="ANyangu Mukhutsi Majimbo">
+    <meta name="robots" content="index, follow">
+    <!-- 🌐 Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="Majimbo Anyangu Portfolio">
+<meta property="og:description" content="Explore the portfolio of Majimbo Anyangu – an innovative engineer and developer with a passion for AI, robotics, and web technologies.">
+<meta property="og:image" content="https://anyangumajimbo.github.io/-PLP-Feb-2025-Cohort-Hackathon-1-Portfolio-Challenge-/Majimbo.png"> <!-- Replace with your actual hosted image -->
+<meta property="og:url" content="https://majimbo.dev">
+<meta property="og:type" content="website">
+
+<!-- 🐦 Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Majimbo Anyangu Portfolio">
+<meta name="twitter:description" content="Engineer. Developer. Innovator. Discover my work in AI, robotics, and software development.">
+<meta name="twitter:image" content="https://anyangumajimbo.github.io/-PLP-Feb-2025-Cohort-Hackathon-1-Portfolio-Challenge-/Majimbo.png"> <!-- Use the same or alternate image -->
+<meta name="twitter:url" content="https://majimbo.dev">
+
+    <title>Majimbo Anyangu Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="style.css"> 
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<!-- This is where the body starts -->
+<body>
+   <!-- Hero Section -->
+   <div class="hero-image" id="hero">
+   <div class="hero-content">
+   <div class="hero-text">
+        <!-- Hero Text  -->
+      <h1>I am <br> Majimbo Anyangu</h1>
+      <p>Innovative solutions for lasting impact.</p>
+
+                      
+    <!-- Programming Languages Ticker -->
+    <div class="languages-container">
+        <h2>Programming Skills</h2>
+        <span class="languages-label">I am proficient in:</span>
+        <div class="languages-ticker">
+            <span class="language-item">HTML</span>
+            <span class="language-item">CSS</span>
+            <span class="language-item">JavaScript</span>
+
+            <span class="language-item">Python</span>
+            <span class="language-item">C</span>
+            <span class="language-item">MQTT</span>
+            <!-- Duplicate items for seamless looping -->
+            
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+        
+    <!-- Header -->
+    <header id="header">
+        <!-- Logo Section -->
+        <div class="logo">
+            <!-- Logo Image -->
+             <p>M.ANYANGU</p>
+        </div>
+
+        <!-- CV Dropdown in Header -->
+        <div class="cv-dropdown">
+            <div class="header-cv-btn">
+                <i class="fas fa-file-alt"></i> MY CV
+            </div>
+            <div class="cv-dropdown-content">
+                <a href="./assets/MAJIMBOCV.pdf" target="_blank">
+                    <i class="far fa-eye"></i> View CV
+                </a>
+                <a href="./assets/MAJIMBOCV.pdf" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+        </div>
+    
+        <!-- Social Media Section -->
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:example@example.com" target="_blank" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <!-- Hamburger Menu -->
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+    <label for="hamburger-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Navigation Section -->
+    <nav class="dropdown-nav">
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-home">Home</a></li>  <!-- Added Home link -->
+            <li><a href="#about" class="nav-about">About</a></li>
+            <li><a href="#education" class="nav-education">Education</a></li>
+            <li><a href="#interests" class="nav-interests">Interests</a></li>
+            <li><a href="#projects" class="nav-projects">Projects</a></li>
+            <li><a href="#contact" class="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <!-- This grid will hold the profile image and description -->
+                <!-- Profile Image and Description -->
+                <div class="about-item">
+                    <div class="about-image">
+                        <img src="./assets/Majimbo.png" alt="Majimbo Anyangu" class="profile-image">
+                    </div>
+                    <div class="about-text">
+                        <p>I’m Majimbo Anyangu, an engineer with a strong foundation in both hardware and software. I hold a degree in Electrical and Electronics Engineering from the Technical University of Kenya and am currently enhancing my software development skills through PLP Academy. My work sits at the intersection of engineering and AI, with a focus on dataset optimization and multilingual systems.</p>
+                        <p>During my academic journey, I took part in a short exchange program at the National School of Engineers of Tarbes (ENIT), where I studied in French and gained deeper insight into integrated system design. This experience expanded both my technical and intercultural competence.</p>
+                        <p>To support myself throughout my studies, I worked as a freelancer—teaching French and Swahili, and contributing to AI data projects. These roles sharpened my communication skills, deepened my understanding of real-world AI applications, and strengthened my adaptability.</p>
+                        <p>I am passionate about building intelligent, practical solutions that drive impact. Whether working on AI systems, teaching, or engineering prototypes, I approach every project with curiosity, purpose, and a commitment to excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- The education section -->
+    <div class="container">
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-grid">
+                <!-- PLP Academy -->
+                <div class="edu-item">
+                    <div class="edu-text">
+                        <h3>Power Learn Project – Software Development Scholarship</h3>
+    <h5>Junior Software Developer Training Program</h5>
+    <p class="date">February 2025 – Date</p>
+    <p>Ongoing 16-week program combining coding, entrepreneurship, and career skills for tech roles and startup success.</p>
+    
+    <h4>Key Areas of Study:</h4>
+    <ul class="skills">
+      <li>Software Engineering Fundamentals: Git, GitHub, CLI, project management</li>
+      <li>Web Development: HTML, CSS, JavaScript, responsive design, DOM manipulation</li>
+      <li>Python Programming: Core concepts, debugging, problem-solving, real-world projects</li>
+      <li>Databases & SQL: Data modeling, SQL syntax, relational database design</li>
+      <li>Startup Building: Product development, startup strategy, and tech entrepreneurship</li>
+    </ul>
+                    </div>
+                    <div class="edu-image">
+                        <img src="./assets/PLP.webp" alt="PLP Academy">
+                    </div>
+                </div>
+                <!-- École Nationale d'Ingénieurs de Tarbes -->
+                <div class="edu-item">
+                    <div class="edu-text">
+                        <h3>École Nationale d'Ingénieurs de Tarbes</h3>
+                        <h5>Exchange Program | Integrated Systems Design (Mechatronics & Robotics)</h5>
+                        <p class="date">September 2024 – January 2025</p>
+
+                        <h4>Key Skills  Developed:</h4>
+                        <ul class="skills">
+                            <li>Design and manufacturing of industrial systems</li>
+                            <li>Instrumentation and simulation</li>
+                            <li>Project management with environmental, economic, and social considerations</li>
+                        </ul>
+                    </div>
+                    <div class="edu-image">
+                        <img src="./assets/Enit.webp" alt="École Nationale d'Ingénieurs de Tarbes">
+                    </div>
+                </div>
+                <!-- Technical University of Kenya -->
+                <div class="edu-item">
+                    <div class="edu-text">
+                        <h3>Technical University of Kenya – Nairobi, Kenya</h3>
+    <h5>Bachelor of Technology: Electrical and Electronic Engineering</h5>
+    <p class="date">September 2020 – August 2024</p>
+    <p>Specialized in Automation and Control Engineering</p>
+    <h4>Key Skills Developed:</h4>
+    <ul class="skills">
+      <li>Control systems and automation</li>
+      <li>Microcontroller programming and interfacing</li>
+      <li>Power electronics and renewable energy systems</li>
+      <li>Data analysis and machine learning applications in engineering</li>
+    </ul>
+                    </div>
+                    <div class="edu-image">
+                        <img src="./assets/TUK.webp" alt="Technical University of Kenya">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="container">
+  <!-- Interests Section -->
+<section id="interests">  <!-- Fixed ID to match CSS -->
+    <h2>Interests</h2>
+    <div class="interests-grid">
+        <!-- AI & Machine Learning -->
+        <div class="interest-item" id="interest1">
+            <div class="interest-content">
+                <h3>AI & Machine Learning</h3>
+                <p>Passionate about developing AI models, deep learning, and machine learning algorithms.</p>
+            </div>
+        </div>
+
+        <!-- Robotics -->
+        <div class="interest-item" id="interest2">
+            <div class="interest-content">
+                <h3>Robotics</h3>
+                <p>Focus on robotic systems, including control, automation, and AI integration.</p>
+            </div>
+        </div>
+
+        <!-- Software Development -->
+        <div class="interest-item" id="interest3">
+            <div class="interest-content">
+                <h3>Software Development</h3>
+                <p>Full-stack development, building scalable and user-friendly applications.</p>
+            </div>
+        </div>
+
+        <!-- Embedded Systems -->
+        <div class="interest-item" id="interest4">
+            <div class="interest-content">
+                <h3>Embedded Systems</h3>
+                <p>Creating IoT and automation systems with microcontrollers.</p>
+            </div>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="interest-item" id="interest5">
+            <div class="interest-content">
+                <h3>Data Analysis</h3>
+                <p>Analyzing datasets and deriving insights using Python, R, and SQL.</p>
+            </div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="interest-item" id="interest6">
+            <div class="interest-content">
+                <h3>Cybersecurity</h3>
+                <p>Penetration testing, threat analysis, and securing systems.</p>
+            </div>
+        </div>
+        </div>
+</section>
+    </div>
+    
+<!-- Projects Section -->
+<div class="container">
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <!-- 3D Image Carousel -->
+            <div class="project-item">
+                <div class="project-text">
+                    <h3>3D Image Carousel Animation</h3>
+                    <p>The 3D Image Carousel Animation is a visually engaging project that showcases a rotating 3D image gallery using only HTML and CSS. It utilizes <strong>CSS transformations, perspective, and animations</strong> to create a dynamic effect, enhanced by reflections. The project highlights pure CSS capabilities for creating interactive, JavaScript-free web components.</p>
+               
+
+                    
+                </div>
+                <div class="project-image">
+                    <img src="./assets/3D.png" alt="3D Image Carousel Animation">
+                    <a href="https://example.com/3d-carousel" class="project-button" target="_blank">Live Demo</a>
+                    <a href="https://github.com/yourusername/3d-carousel" class="project-button" target="_blank">View Code</a>
+                
+                </div>
+            </div>
+
+            <!-- Home Automation -->
+            <div class="project-item">
+                <div class="project-text">
+                    <h3>Home Automation Using Bluetooth</h3>
+                    <p>The Home Automation Using Bluetooth project enables remote control of household appliances via a <strong>Bluetooth-enabled microcontroller</strong>. It uses an <strong>Android app</strong> to send control signals, processed by the microcontroller to switch devices on/off. Implemented using <strong>C++ (Arduino) for embedded programming</strong>, it integrates <strong>real-time communication protocols</strong> for seamless and responsive automation.</p>
+                </div>
+                <div class="project-image">
+                    <img src="./assets/HomeAutomation.jpg" alt="Home Automation System">
+
+                    <a href="https://example.com/home-automation" class="project-button" target="_blank">Demo Video</a>
+                    <a href="https://github.com/yourusername/home-automation" class="project-button" target="_blank">Documentation</a>
+                </div>
+            </div>
+
+            <!-- Robotic Hand -->
+            <div class="project-item">
+                <div class="project-text">
+                    <h3>Soft-Active Robotic Hand</h3>
+                    <p>The Soft-Active Robotic Hand utilizes <strong>Nitinol shape-memory alloy (SMA) actuators</strong> for flexible and responsive motion. The system is <strong>microcontroller-driven</strong>, with <strong>Arduino (C++) programming</strong> controlling actuation. Sensors provide <strong>real-time feedback</strong>, enabling adaptive grasping. The <strong>Finite Element Method (FEM)</strong> is used for structural analysis, ensuring optimized force distribution. The design integrates <strong>embedded control algorithms</strong> for smooth, precise movements.</p>
+
+                </div>
+                <div class="project-image">
+                    <img src="./assets/ROBOTCSI.jpg" alt="Soft-Active Robotic Hand">
+                    <a href="https://example.com/home-automation" class="project-button" target="_blank">Demo Video</a>
+                    <a href="https://github.com/yourusername/home-automation" class="project-button" target="_blank">Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- Contact form section -->
+<section id="contact">
+    <div class="contact-container">
+        <h2>GET IN TOUCH</h2>
+        <p>Every great project starts with a conversation. Let’s talk about turning your ideas into innovative solutions.
+
+            .</p>
+        
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" autocomplete="off" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." autocomplete="off" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        
+    </div>
+</section>
+
+
+ <!-- Footer Section -->
+ <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-chevron-right"></i> About Me</a></li>
+                <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
+                <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Technical Skills</h3>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fas fa-code"></i> HTML/CSS/JavaScript</a></li>
+                <li><a href="#"><i class="fas fa-robot"></i> AI & Machine Learning</a></li>
+                <li><a href="#"><i class="fas fa-microchip"></i> Embedded Systems</a></li>
+                <li><a href="#"><i class="fas fa-database"></i> Data Analysis</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+                <li><a href="mailto:majimboanyangu@gmail.com"><i class="fas fa-envelope"></i> majimboanyangu@gmail.com</a></li>
+                <li><a href="tel:+254746954120"><i class="fas fa-phone-alt"></i> +254 7469 541 20</a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</a></li>
+                <li><a href="MAJIMBOCV.pdf" download><i class="fas fa-file-download"></i> Download CV</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Majimbo Anyangu. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+
+</html>

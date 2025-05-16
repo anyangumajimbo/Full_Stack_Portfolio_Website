@@ -1,0 +1,1145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure the body takes full width */
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Set global font */
+    touch-action: pan-y; /*  Added to solve horizontal scrolling issueOnly allows vertical touch scrolling */
+    
+   background: 
+    linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 10%);
+}
+  
+  
+  .hero-image {
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Fallback gradient */
+
+    /* Use "linear-gradient" to add a darken background effect to the image (./assets/Hero.webp). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./assets/Hero.webp"); /* Image background */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 1.0; /* Adjust opacity for the background image */
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    margin-top: 1rem;
+  }
+  
+         /* Programming Languages Ticker - Mobile Version */
+         .languages-container {
+            position: relative;
+            margin: 1.5rem 0;
+            color: white;
+            width: 100%;
+            text-align: center; /* Center align the text */
+            overflow: hidden; /* Hide overflow for the ticker */
+        }
+
+        .languages-container h2 {
+            color: #e74c3c;
+            font-size: 2rem;
+            margin-top: 80px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(0,0,0,0.6);
+        }
+
+        .languages-label {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .languages-ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollLanguagesMobile 8s linear infinite;
+            padding: 10px 0;
+            color: white; /* Ensure text is white for visibility */
+            overflow: hidden; /* Hide overflow for the ticker */
+        }
+        
+        .language-item {
+            display: inline-block;
+            background: rgba(0, 123, 255, 0.6); /* Semi-transparent background */
+            padding: 6px 12px;
+            margin: 0 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        @keyframes scrollLanguagesMobile {
+            0% {
+                transform: translateX(20%);
+            }
+            100% {
+                transform: translateX(-20%);
+            }
+        }
+
+  /* CV Links Container */
+
+
+  /* Header Section */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(0, 123, 240, 0.8); /* Semi-transparent background */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+
+.logo p {
+    font-size: 20px;
+    color: white;
+}
+
+ /* Multicolor Blinking CV Button */
+ .header-cv-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    animation: rainbowBlink 3s infinite;
+}
+
+@keyframes rainbowBlink {
+    0% { background-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+    14% { background-color: #ff7f00; box-shadow: 0 0 10px #ff7f00; }
+    28% { background-color: #ffff00; box-shadow: 0 0 10px #ffff00; }
+    42% { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
+    57% { background-color: #0000ff; box-shadow: 0 0 10px #0000ff; }
+    71% { background-color: #4b0082; box-shadow: 0 0 10px #4b0082; }
+    85% { background-color: #9400d3; box-shadow: 0 0 10px #9400d3; }
+    100% { background-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+}
+
+.header-cv-btn:hover {
+    animation: none;
+    background-color: #ff5722 !important;
+    box-shadow: 0 0 15px #ff5722;
+}
+
+/* CV Dropdown Menu */
+.cv-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.cv-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cv-dropdown-content a {
+    white-space: nowrap; /* Prevent text wrapping */
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+}
+
+.cv-dropdown-content a:hover {
+    background-color: #007BFF;
+    color: white;
+    padding-left: 20px;
+}
+
+.cv-dropdown-content a i {
+    white-space: nowrap; /* Prevent text wrapping */
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+    
+}
+
+.cv-dropdown:hover .cv-dropdown-content {
+    display: block;
+}
+
+
+/*Social media icons*/
+.social-media {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    order: 2; /* Ensure social media icons come after the navigation links */
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: lightblue;
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Hamburger Menu */
+/* Show Dropdown When Checkbox is Checked */
+#hamburger-toggle:checked ~ .dropdown-nav {
+    left: 0; /* Slide in the menu */
+}
+
+.hamburger-checkbox {
+    display: none; /* Hide the checkbox */
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none; /* Hide by default, will show on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Navigation */
+.dropdown-nav {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden off-screen */
+    width: auto; /* Width of the dropdown menu */
+    height: auto; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 0.3s ease; /* Smooth slide-in effect */
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    order: 1; /* Ensure links come before social media icons */
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: lightblue;
+}
+
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; /* Limit the width */
+    width: 100%; /* Ensure it doesn't exceed the viewport */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Prevent overflow for child elements */
+}
+.row {
+    display: grid;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.row:nth-child(1)  {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 20px; /* Two small side columns and two large central columns */
+    gap: 0px; /* No gap between the columns */
+    background-color: #3498db; /* Background color for this row */
+}
+
+/* About Section */
+#about {
+    padding: 4px 2px;
+    background-color: transparent; /* Use transparent to show the background image */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Grid Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+/* Each about row */
+.about-item, .edu-item { /* Reuse the same class for consistency and combining repetitive styles to reduce redundancy  */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Text on the left, Image on the right */
+    align-items: center;
+    background-color: transparent; /* Make sure the background is transparent to show the background image */
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: orangered 5px solid; /* Border color for the about section items */
+    
+}
+
+/* Text section */
+.about-text {
+        text-align: left;
+        padding: 5px;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+.about-text p {
+    max-width: 90%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
+}
+
+/* Image section */
+.about-image img {
+    max-width: 50%; /* Ensure the image does not exceed the width of its container */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+/* Education Section */
+#education {
+    padding: 4px 2px;
+    background-color: transparent; /* Use transparent to show the background image */
+    text-align: center;
+}
+
+#education h2 {
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid Layout */
+.edu-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack in one column on small screens */
+    gap: 5px;
+}
+
+/* Each edu-item should be flex for image + text layout */
+.edu-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Text section */
+.edu-text {
+    text-align: left;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.edu-text h3 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 8px; /* Space below the heading */
+}
+
+.edu-text h4,
+.edu-text h5 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 8px; /* Slightly smaller space for subheadings */
+}
+
+.edu-text p {
+    max-width: 90%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
+    color: #333;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+   /* margin-left: auto;  Center align the text in the grid item 
+    margin-right: auto;  Center align the text in the grid item */
+    padding-left: 0px;
+}
+
+#education .date {
+    color: #333;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding-left: 0px;
+  }
+
+  .edu-text ul {
+    padding-left: 0px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .edu-text li {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+/* Image section */
+.edu-image img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+
+/* Interest Section Styling */
+#interests {
+    padding: 4px 2px;
+    background-color: transparent; /* Use transparent to show the background image */
+    text-align: center;
+}
+
+#interests h2 {
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid Layout for Interests */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px;
+}
+
+/* Each interest item */
+.interest-item {
+    background-color: transparent; /* Use transparent to show the background image */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow effect on hover */
+}
+
+/* Interest Icon */
+.interest-item i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.interest-item i:hover {
+    color: #e74c3c; /* Change icon color on hover */
+}
+
+/* Interest Title */
+.interest-item h3 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Interest Description */
+.interest-item p {
+    max-width: 100%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
+    color: white;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
+}
+    .interest-item h3, 
+    .interest-item p {   background: rgba(0, 0, 0, 0.5); /* Dark translucent layer */
+        padding: 1rem; /* Spacing around text */
+        border-radius: 8px; /* Optional: rounded corners */
+        display: inline-block; /* Fits content width */
+    
+}
+
+/* Interests Background images */
+#interest1 {
+    background-image: url('./assets/AI2.webp');
+    background-size: cover;
+    background-position: center;
+   
+  }
+  
+  #interest2 {
+    background-image: url('./assets/Robotics.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  #interest3 {
+    background-image: url('./assets/PLP.png');
+    background-size: cover;
+    background-position: center;
+   
+  }
+
+  #interest4 {
+    background-image: url('./assets/embedded.jpg');
+    background-size: cover;
+    background-position: center;
+    
+      
+  }
+  
+  #interest5 {
+    background-image: url('./assets/Data1.webp');
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  #interest6 {
+    background-image: url('./assets/cybersecurity.jpg');
+    background-size: cover;
+    background-position: center;
+   
+  }
+
+/* Styling for the project section */
+#projects {
+    padding: 10px 5px;
+    background-color: transparent; /* Use transparent to show the background image */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid Layout - Desktop */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: transparent; /* Use transparent to show the background image */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-text {
+    padding: 20px;
+}
+
+.project-text h3 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.project-text p {
+    max-width: 80%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
+    color: #333;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Project buttons styling */
+.project-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #e74c3c;
+}
+
+.project-button:hover {
+    background-color: transparent;
+    color: #e74c3c;
+}
+
+/* Contact Section */
+#contact {
+    background-color: transparent; /* Use transparent to show the background image */
+    background-size: cover;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.contact-container h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 52px;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    background-color: transparent; /* Use transparent to show the background image */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-details {
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.4em;
+}
+
+.contact-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%); /* Gradient background for the footer */
+
+    color: white;
+    padding: 50px 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-column {
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #e74c3c;
+}
+
+.footer-column p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #e74c3c;
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #e74c3c;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+/* General overflow prevention */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+/* Ensure the header is responsive */
+#header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+}
+    .hero-text h1 {
+        font-size: 2.6rem;
+        white-space: wrap; /* Prevent text wrapping */
+     
+    }
+    
+    .hero-text p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+
+    .cv-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .cv-btn {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .fas fa-download {
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    #hamburger-toggle:checked ~ .dropdown-nav .nav-links {
+        display: flex; /* Show dropdown navigation */
+    }
+
+    
+    .social-media {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 0px; /* Move logo to the right */
+    }
+    /* Responsiveness for the CV section */
+    .header-cv-btn {
+        padding: 1px 20px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .cv-dropdown-content {
+        right: auto;
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    /*Responsiveness for the About section */
+    .about-item {
+        grid-template-columns: 1fr; /* Stack in one column on small screens */
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+    
+    /*Responsiveness for the Education section */
+    .edu-item {
+        grid-template-columns: 1fr; /* Stack in one column on small screens */
+        text-align: center;
+    }
+
+    
+/* Responsive design for interests sction  */
+    /* Stack the interests grid in one column */
+    .interests-grid {
+        grid-template-columns: 1fr; /* Stack in one column on small screens */
+    }
+
+    /* Adjust the interest item layout */
+    .interest-item {
+        flex-direction: column; /* Ensure items stack vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .interest-item img {
+        width: 100%; /* Ensure images take full width */
+    }
+
+    .interest-item h3 {
+        font-size: 20px; /* Slightly smaller font size for titles */
+    }
+
+    .interest-item p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+    
+
+    /* Responsive design for projects section */
+    .project-item {
+        grid-template-columns: 1fr; /* Stack content vertically */
+        text-align: center; /* Center align text */
+    }
+        
+        .project-text {
+            padding: 5px;
+            order: 1; /* Ensure text comes first */
+        }
+        
+        .project-image {
+            order: 2; /* Ensure image comes after text */
+            margin-top: 15px;
+        }
+        
+        .project-image img {
+            max-width: 100%;
+        }
+        
+        .project-text h3 {
+            font-size: 20px;
+        }
+        
+        .project-text p {
+            font-size: 14px;
+            
+        }
+    
+
+        /* Responsive Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-links a:hover {
+        transform: none;
+    }
+    }
+    
+@media (min-width: 769px) {
+    /* Horizontal Navigation for Large Screens */
+    .dropdown-nav {
+        position: static; /* Remove fixed positioning */
+        width: auto; /* Reset width */
+        background-color: transparent; /* No background */
+        flex-direction: row; /* Horizontal layout */
+        padding: 0;
+    }
+
+    .nav-links {
+        display: flex; /* Show horizontal navigation */
+        flex-direction: row; /* Horizontal layout */
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger menu on large screens */
+    }
+}
+
+
+/* Media Query for Tablets and iPads */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .interests-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .interest-item {
+        text-align: center; /* Ensure items are centered */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+        /* Footer Container */
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns for Quick Links and Technical Skills */
+            gap: 20px; /* Add spacing between columns */
+            text-align: left; /* Align text to the left */
+        }
+    
+        /* Contact Info Centered */
+        .footer-column:nth-child(3) {
+            grid-column: span 2; /* Make Contact Info span across both columns */
+            text-align: center; /* Center-align the content */
+        }
+    
+        /* Social Media Icons Centered */
+        .social-links {
+            justify-content: center; /* Center-align social media icons */
+            margin-bottom: 20px; /* Add spacing below social links */
+        }
+    
+        /* Footer Bottom Text */
+        .footer-bottom {
+            text-align: center; /* Center-align the footer bottom text */
+            margin-top: 20px;
+        }
+    }
