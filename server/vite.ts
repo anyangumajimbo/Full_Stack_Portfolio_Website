@@ -5,6 +5,7 @@ import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
+import { __dirname } from "./dirname"; // 👈 Make sure this helper exists!
 
 const viteLogger = createLogger();
 
@@ -29,7 +30,7 @@ export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
-    allowedHosts: true as const, // fixed typing issue
+    allowedHosts: true as const, // ✅ Fixes type error
   };
 
   const vite = await createViteServer({
